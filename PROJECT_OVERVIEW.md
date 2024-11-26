@@ -55,10 +55,13 @@ Evaluation focuses on retrieval accuracy, generation coherence, and the trade-of
 
 ## Key Learnings
 This project was completed under the supervision of Professor Zhichao Cao at Arizona State University. 
+
+Working on this project was particularly meaningful for me because projects like this were one of the reasons I decided to leave a comfortable job and pursue a Master’s in Computer Science. I wanted to challenge myself and gain hands-on experience with next-generation technologies such as retrieval-augmented generation, large language models, and scalable database systems.
+
 Through this work, I gained:
-- Hands-on experience integrating FAISS, RocksDB, Hugging Face, and OpenAI APIs into a working RAG pipeline.
+- Practical experience integrating FAISS, RocksDB, Hugging Face, and OpenAI APIs into a working RAG pipeline.
 - A deeper understanding of how different chunking strategies (Contextual Retrieval, Late Chunking, Meta-Chunking) impact retrieval accuracy, generation quality, and system efficiency.
-- Practical insights into balancing trade-offs between accuracy and performance when designing production-ready AI systems.
+- Insights into balancing trade-offs between accuracy and performance when designing production-ready AI systems.
 
 ## References
 
