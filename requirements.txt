@@ -1,0 +1,12 @@
+langchain==0.0.321
+pydantic
+faiss-cpu
+streamlit==1.24.0
+sentence-transformers==2.2.2
+huggingface-hub==0.24.0
+unstructured
+python-magic
+nltk
+accelerate>=0.26.0
+jieba==0.42.1
+openai
