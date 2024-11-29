@@ -15,7 +15,7 @@ jobs:
       - name: Configure branch protection via REST API
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.BRANCH_PROTECT_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
