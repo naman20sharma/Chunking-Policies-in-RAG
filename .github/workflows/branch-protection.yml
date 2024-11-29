@@ -11,22 +11,23 @@ jobs:
     name: Protect main branch
     runs-on: ubuntu-latest
     steps:
+
       - name: Configure branch protection via REST API
         uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.BRANCH_PROTECT_TOKEN }}
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const branch = 'main';
 
-            // Configure protection options per request
             await github.rest.repos.updateBranchProtection({
               owner,
               repo,
               branch,
               required_status_checks: {
                 strict: true,
-                contexts: [] // specify required status check contexts here if you have any
+                contexts: []
               },
               enforce_admins: true,
               required_pull_request_reviews: {
@@ -34,12 +35,10 @@ jobs:
                 dismiss_stale_reviews: false,
                 require_code_owner_reviews: false,
                 required_approving_review_count: 1,
-                // Enable conversation resolution requirement if supported by the API
                 require_conversation_resolution: true
               },
               restrictions: null,
               allow_deletions: false,
               allow_force_pushes: false
             });
-
             core.info(`Branch protection applied to ${owner}/${repo}@${branch}`);
