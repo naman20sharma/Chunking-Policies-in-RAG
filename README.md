@@ -1,42 +1,68 @@
-# DPSFinalProj
-Here is the link to our project https://docs.google.com/document/d/1OPwcW68nX6oHPC0tTZNK4IeEwQEZnrusHZRxExFZkss/edit?tab=t.0#heading=h.3zm9f8g1ndd9
+# Retrieval-Augmented Generation with Advanced Chunking
 
-1. Open the directory you want the repo in and then clone the repository using the link 
-```python
-git clone https://github.com/Fall-24-CSE511-Data-Processing-at-Scale/Project-7-Group-14.git
-```
-2. Open anaconda and run the following commands down below in the directory you have cloned the repository
-If you do not have anaconda download it from the link (https://docs.anaconda.com/anaconda/install/)
-```python
-conda create -n rag_system 
-conda activate rag_system
+This project explores advanced document chunking strategies (Late Chunking, Meta-Chunking, Contextual Retrieval) to improve Retrieval-Augmented Generation (RAG). Built with FAISS, RocksDB, Hugging Face Transformers, and OpenAI API, with a Streamlit UI for evaluation.
+
+## Motivation
+Retrieval-Augmented Generation (RAG) is powerful but depends heavily on how documents are chunked. I built this project to explore advanced chunking strategies, compare their performance, and learn how they impact real-world RAG systems. This project helped me deepen my understanding of vector databases, LLM integration, and efficient retrieval at scale.
+
+## Quick Start
+```bash
+git clone https://github.com/namanx20/Chunking-Policies-in-RAG.git
+cd Chunking-Policies-in-RAG
 pip install -r requirements.txt
-
-```
-```python
-git clone https://github.com/facebook/rocksdb.git
-git clone https://github.com/huggingface/transformers.git
-```
-
-3. Add a data folder within the repo and add the file you want to ingest into RocksDB, make sure the file has only a .txt extension
-
-4. Run the command below to ingest the data from your file into the vector database
-```python
-python build_vector_store.py
-```
-5. Run the command
-```python
-huggingface-cli login
-```
-Once prompted to enter the token, enter
-```python
-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
-```
-Do not share the token with anyone
-
-7. Once the data is ingested run the command down below to open our chatbot
-```python
 streamlit run main.py
 ```
-After running the command we see our UI, once you ask a question be patient it takes over 10 minutes to generate one answer 
 
+**Step 1: Clone this repository**
+
+```bash
+git clone https://github.com/namanx20/Chunking-Policies-in-RAG.git
+cd Chunking-Policies-in-RAG
+```
+
+**Step 2: Set up the environment**
+
+Create a virtual environment and install the dependencies:
+```bash
+conda create -n rag_system python=3.10
+conda activate rag_system
+pip install -r requirements.txt
+```
+
+**Step 3: Add your data**
+
+Add a `data` folder within the repo and place the `.txt` files you want to ingest into RocksDB.
+
+**Step 4: Ingest data into the vector database**
+
+Run the following command to ingest your data:
+
+```bash
+python build_vector_store.py
+```
+
+**Step 5: Login to Hugging Face**
+
+Run:
+
+```bash
+huggingface-cli login
+```
+
+When prompted, enter your Hugging Face token. Do not share your token with anyone.
+
+**Step 6: Run the Streamlit UI**
+
+Once the data is ingested, run:
+
+```bash
+streamlit run main.py
+```
+
+This will launch the Streamlit UI where you can upload documents and compare chunking strategies.
+
+## Demo
+![UI Screenshot](demo.png)
+
+## Project Overview
+For detailed background knowledge, methodology, and task breakdowns, see [PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md).
