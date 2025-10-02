@@ -62,7 +62,7 @@ streamlit run main.py
 This will launch the Streamlit UI where you can upload documents and compare chunking strategies.
 
 ## Demo
-![UI Screenshot](demo.png)
+![UI Screenshot](assets/ui.png)
 
 ## Project Overview
 For detailed background knowledge, methodology, and task breakdowns, see [PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md).
