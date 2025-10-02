@@ -66,3 +66,6 @@ This will launch the Streamlit UI where you can upload documents and compare chu
 
 ## Project Overview
 For detailed background knowledge, methodology, and task breakdowns, see [PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md).
+
+## Further Reading
+For more details, see the [full project report](https://drive.google.com/file/d/1C5M45FsZr-146r-UUS90DhwvcFuZILSX/view?usp=sharing ).
