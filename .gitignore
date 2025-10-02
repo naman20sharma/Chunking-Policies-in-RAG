@@ -2,3 +2,11 @@
 /transformers
 /data
 .DS_Store
+.vscode/
+myenv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.db
+*.idx
+*.pkl
